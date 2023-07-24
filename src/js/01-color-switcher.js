@@ -9,22 +9,16 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-startElement.addEventListener(
-  'click',
-  onClick(() => {
-    startElement.setAttribute('disabled', '');
-    stopElement.removeAttribute('disabled');
-    timerId = setInterval(() => {
-      body.style.backgroundColor = getRandomHexColor();
-    }, 1000);
-  })
-);
+startElement.addEventListener('click', () => {
+  startElement.setAttribute('disabled', '');
+  stopElement.removeAttribute('disabled');
+  timerId = setInterval(() => {
+    body.style.backgroundColor = getRandomHexColor();
+  }, 1000);
+});
 
-stopElement.addEventListener(
-  'click',
-  stopChange(() => {
-    startElement.removeAttribute('disabled');
-    stopElement.setAttribute('disabled', '');
-    clearInterval(timerId);
-  })
-);
+stopElement.addEventListener('click', () => {
+  startElement.removeAttribute('disabled');
+  stopElement.setAttribute('disabled', '');
+  clearInterval(timerId);
+});

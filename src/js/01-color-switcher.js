@@ -11,7 +11,7 @@ function getRandomHexColor() {
 
 startElement.addEventListener(
   'click',
-  (onClick = () => {
+  onClick(() => {
     startElement.setAttribute('disabled', '');
     stopElement.removeAttribute('disabled');
     timerId = setInterval(() => {
@@ -22,7 +22,7 @@ startElement.addEventListener(
 
 stopElement.addEventListener(
   'click',
-  (stopChange = () => {
+  stopChange(() => {
     startElement.removeAttribute('disabled');
     stopElement.setAttribute('disabled', '');
     clearInterval(timerId);

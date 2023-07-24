@@ -1,5 +1,5 @@
-const start = document.querySelector('[data-start]');
-const stop = document.querySelector('[data-stop]');
+const startElement = document.querySelector('[data-start]');
+const stopElement = document.querySelector('[data-stop]');
 const body = document.querySelector('body');
 let timerId = null;
 
@@ -12,19 +12,19 @@ function getRandomHexColor() {
 start.addEventListener(
   'click',
   (onClick = () => {
-    start.setAttribute('disabled', '');
-    stop.removeAttribute('disabled');
+    startElement.setAttribute('disabled', '');
+    stopElement.removeAttribute('disabled');
     timerId = setInterval(() => {
       body.style.backgroundColor = getRandomHexColor();
     }, 1000);
   })
 );
 
-stop.addEventListener(
+stopElement.addEventListener(
   'click',
   (stopChange = () => {
-    start.removeAttribute('disabled');
-    stop.setAttribute('disabled', '');
+    startElement.removeAttribute('disabled');
+    stopElement.setAttribute('disabled', '');
     clearInterval(timerId);
   })
 );

@@ -9,7 +9,7 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-start.addEventListener(
+startElement.addEventListener(
   'click',
   (onClick = () => {
     startElement.setAttribute('disabled', '');

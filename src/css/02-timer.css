@@ -1,0 +1,25 @@
+body {
+  height: 200px;
+  width: 200px;
+  background-color: azure;
+}
+
+.field {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.value {
+  background-color: rgb(111, 111, 214);
+  width: 40px;
+  height: 40px;
+}
+
+.label {
+  background-color: rgb(205, 212, 61);
+  width: 70px;
+  height: 40px;
+}
